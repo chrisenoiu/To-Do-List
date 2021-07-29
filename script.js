@@ -124,7 +124,6 @@ function itemInput() {
       document
         .querySelector("#item" + indexValue)
         .setAttribute("style", "text-decoration:line-through");
-        
     } else {
       document
         .querySelector("#item" + indexValue)
