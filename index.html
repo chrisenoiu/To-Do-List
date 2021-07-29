@@ -4,107 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Array List - Push & Pop</title>
   </head>
   <body>
     <!-- Let's Start! -->
-    <div
-      id="letsStart"
-      class="
-        position-absolute
-        top-50
-        start-50
-        translate-middle
-        d-flex
-        flex-column
-        justify-content-center
-      "
-    >
-      <div class="">
-        <h2 class="text-center mb-2 text-black-50">Hey there!</h2>
-        <h1 class="text-center mb-5">Need a to-do list?</h1>
-        <p class="text-center mb-5 mt-2">Click the button and...</p>
+    <div id="letsStart" class="container-column">
+      <div class="container-column">
+        <h2 class="text-center sub-title">Hello there!</h2>
+        <h1 class="text-center title">
+          Would you like to test my <br />To-Do List App?
+        </h1>
+        <div class="spacer-25"></div>
       </div>
-      <button id="showStart" class="btn btn-success">Let's Start!</button>
+      <button id="showStart" class="button button-succes">Let's Start ></button>
     </div>
 
     <!-- Hidden Content -->
-    <div id="content" class="visually-hidden">
+    <div id="content" class="hide">
       <!-- Total Container -->
-      <div
-        id="container"
-        class="position-absolute top-50 start-50 translate-middle"
-      >
+      <div id="container" class="container-column">
         <!-- New List Container -->
-        <div
-          id="container-new-list"
-          class="d-flex flex-column justify-content-center"
-        >
-          <h1 class="text-center mt-5 mb-2">Let's get creative!</h1>
-          <p class="text-center mb-5 mt-2">Choose a name for your list!</p>
+        <div id="container-new-list" class="container-column">
+          <h1 class="text-center title">Let's get creative!</h1>
+          <p class="text-center text">Choose a name for your list!</p>
+          <div class="spacer-25"></div>
           <!-- Input list field -->
-          <div class="input-group">
+          <div class="input-container">
             <!-- Input field -->
             <input
               id="new-input"
               type="text"
-              class="form-control"
+              class="input-field"
               placeholder="Insert name here..."
             />
             <!-- List Add button -->
-            <button id="new-button" class="btn btn-success" type="button">
+            <button
+              id="new-button"
+              class="input-button button-alert"
+              type="button"
+            >
               Create
             </button>
           </div>
-          <p class="text-center mb-2 mt-5">
+          <div class="spacer-25"></div>
+          <p class="text-center text">
             ..or I'll create a random list for you!
           </p>
         </div>
 
         <!-- Primary List Container -->
-        <div id="container-group-list" class="visually-hidden">
+        <div id="container-group-list" class="hide">
+          <!-- List Title -->
+          <div id="titleContainer">
+            <h3 id="listTitle" class="text-center title"></h3>
+          </div>
           <!-- List Container -->
-          <div id="container-list" class="">
-            <!-- List Title -->
-            <div id="titleContainer">
-              <h3 id="listTitle" class="text-center mb-5"></h3>
-            </div>
+          <div id="container-list" class="container-scroll bg-content mt10">
             <!-- List Content will be added here! -->
           </div>
 
           <!-- Add items to the list -->
-          <div id="container-item" class="mt-5">
-            <!-- Item Input -->
-            <div class="input-group">
+          <div class="spacer-25"></div>
+          <div id="container-item" class="container-column">
+            <!-- Item Input Field -->
+            <div class="input-container">
               <input
                 id="item-input"
                 type="text"
-                class="form-control"
+                class="input-field"
                 placeholder="Insert item.."
               />
               <!-- Item add button -->
-              <button id="item-button" class="btn btn-primary" type="button">
-                Add!
+              <button
+                id="item-button"
+                class="input-button button-alert"
+                type="button"
+              >
+                Add
               </button>
             </div>
           </div>
         </div>
 
         <!-- Delete List Section -->
-        <div
-          id="container-delete-list"
-          class="text-center mt-5 visually-hidden"
-        >
+        <div id="container-delete-list" class="text-center mt-5 hide">
+          <div class="spacer-50"></div>
           <p>Want to start over?</p>
           <div>
-            <button id="delete-button" class="btn btn-warning" type="button">
-              Delete the list!
+            <div class="spacer-25"></div>
+            <button
+              id="delete-button"
+              class="button button-danger"
+              type="button"
+            >
+              Delete
             </button>
           </div>
         </div>

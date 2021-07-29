@@ -7,7 +7,7 @@ let startButton = document.querySelector("#showStart");
 let hidenStart = document.querySelector("#content");
 
 function contentShow() {
-  hidenStart.classList.remove("visually-hidden");
+  hidenStart.classList.remove("hide");
 }
 
 // Let's Start!
@@ -77,7 +77,7 @@ let newItemButton = document.querySelector("#item-button");
 // Function that creates a "li" item.
 function listItem() {
   let listItem = document.createElement("li");
-  listItem.classList.add("d-flex", "justify-content-between", "mt-3");
+  listItem.classList.add("container-between", "mt10", "mb10");
   ulList.appendChild(listItem);
 }
 
@@ -92,7 +92,7 @@ function itemInput() {
   let itemValue = "item" + indexValue;
   let checkValue = "chk" + indexValue;
 
-  listItem.classList.add("d-flex", "justify-content-between", "mt-3");
+  listItem.classList.add("container-between", "mt10", "mb10");
   listItem.setAttribute("id", "item" + indexValue);
 
   //Debug Area:
@@ -124,6 +124,7 @@ function itemInput() {
       document
         .querySelector("#item" + indexValue)
         .setAttribute("style", "text-decoration:line-through");
+        
     } else {
       document
         .querySelector("#item" + indexValue)
@@ -141,8 +142,8 @@ function itemInput() {
 
   //Creates a close button after the text.
   let closeItem = document.createElement("button");
-  closeItem.classList.add("btn-close");
-  closeItem.setAttribute("type", "button");
+  let closeItemText = document.createTextNode("X");
+  closeItem.classList.add("button-close");
   closeItem.addEventListener("click", () => {
     document.querySelector("#item" + indexValue).remove();
     //Debug Area.
@@ -153,7 +154,7 @@ function itemInput() {
         " has been removed by the user!"
     );
   });
-
+  closeItem.appendChild(closeItemText);
   listItem.appendChild(closeItem);
 
   //Clear Input after action.
@@ -168,12 +169,12 @@ function itemInput() {
 // Action Button to create new items.
 
 // newItemButton.addEventListener("click", itemInput);
-newItemButton.addEventListener("click", ()=>{
-if (document.querySelector("#item-input").value === "") {
-  alert("Please type in the box!");
-} else {
-  itemInput();
-}
+newItemButton.addEventListener("click", () => {
+  if (document.querySelector("#item-input").value === "") {
+    alert("Please type in the box!");
+  } else {
+    itemInput();
+  }
 });
 
 // List Delete Section
@@ -195,37 +196,25 @@ deleteButton.addEventListener("click", () => {
 
 // Show/Hide List Input
 function showList() {
-  document
-    .querySelector("#container-new-list")
-    .classList.remove("visually-hidden");
+  document.querySelector("#container-new-list").classList.remove("hide");
   listName.textContent = "";
 }
 function hideList() {
-  document
-    .querySelector("#container-new-list")
-    .classList.add("visually-hidden");
+  document.querySelector("#container-new-list").classList.add("hide");
 }
 
 // Show/Hide Item Input
 function showInput() {
-  document
-    .querySelector("#container-group-list")
-    .classList.remove("visually-hidden");
+  document.querySelector("#container-group-list").classList.remove("hide");
 }
 function hideInput() {
-  document
-    .querySelector("#container-group-list")
-    .classList.add("visually-hidden");
+  document.querySelector("#container-group-list").classList.add("hide");
 }
 
 // Show/Hide Delete Option
 function showDelete() {
-  document
-    .querySelector("#container-delete-list")
-    .classList.remove("visually-hidden");
+  document.querySelector("#container-delete-list").classList.remove("hide");
 }
 function hideDelete() {
-  document
-    .querySelector("#container-delete-list")
-    .classList.add("visually-hidden");
+  document.querySelector("#container-delete-list").classList.add("hide");
 }

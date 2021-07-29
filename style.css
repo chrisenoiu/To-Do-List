@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container-scroll {
+  height:280px;
+  overflow-y: scroll;
+  padding: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+/* Buttons */
+.button {
+  padding: 10px 28px;
+  border-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.button-close {
+  background-color: #f1f1f1;
+  color: rgb(255, 138, 138);
+  border: none;
+  height: 35%;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.button-close:hover {
+  background-color: #ff7a7a;
+  color: white;
+}
+
+.button-succes {
+  background-color: #3ea164;
+  color: #ffffff;
+}
+
+.button-danger {
+  background-color: #fd6868;
+  color: #ffffff;
+}
+
+.button-alert {
+  background-color: #fdd568;
+  color: #ffffff;
+}
+
+.button-succes:hover {
+  background-color: #1f7e4b;
+  transition: 300ms;
+}
+
+.button-danger:hover {
+  background-color: #a74343;
+}
+
+.button-alert:hover {
+  background-color: #e4ae1c;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #146c43;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.spacer-50 {
+  height: 50px;
+}
+
+.spacer-25 {
+  height: 25px;
+}
+
+.spacer-100 {
+  height: 100px;
+}
+
+.hide {
+  display: none;
+}
+
+.input-container {
+  width: 420px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.input-field {
+  height: 100%;
+  width: 100%;
+  background-color: #f1f1f1;
+  border-style: none;
+  outline: none;
+  padding: 0px 20px 0;
+  font-size: 18px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.input-button {
+  height: 100%;
+  padding: 10px 32px;
+  border-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.container-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.bg-content{
+    background-color: #f1f1f1;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
