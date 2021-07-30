@@ -168,13 +168,23 @@ function itemInput() {
 // Action Button to create new items.
 
 // newItemButton.addEventListener("click", itemInput);
-newItemButton.addEventListener("click", () => {
+newItemButton.addEventListener("click", createElement);
+// newItemButton.addEventListener("keyUp",);
+
+// function(event) {
+//   if (event.keyCode === 13) {
+//     event.preventDefault();
+//     createElement();
+//   }
+// }
+
+function createElement() {
   if (document.querySelector("#item-input").value === "") {
     alert("Please type in the box!");
   } else {
     itemInput();
   }
-});
+}
 
 // List Delete Section
 let containerDeleteList = document.querySelector("#container-delete-list");
